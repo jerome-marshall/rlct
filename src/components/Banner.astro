@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets"
+import bannerImg from "@/assets/restoreStaffs.png"
+import WavesPattern from "@/assets/waves-pattern.png"
+import { Button } from "@/components/ui/button"
+import Link from "./Link.astro"
+---
+
+<div class="container module">
+  <div class="flex items-center gap-32">
+    <div class="flex-1">
+      <h1 class="relative text-heading text-5xl font-secondary leading-tight">
+        Lifestyle Coaching Can <span
+          class="font-secondary text-primary marker-underline"
+          >Change Lives</span
+        >
+      </h1>
+      <p class="pt-6 text-sm text-text leading-relaxed">
+        Lifestyle coaches are caring individuals who guide and educate their
+        clients to discover a healthier lifestyle. By joining our training, you
+        can gain confidence to help people reverse or reduce conditions like
+        diabetes, hypertension and obesity.
+      </p>
+      <div class="flex pt-8 gap-4">
+        <Link href="/" asButton>View Curriculum</Link>
+        <Link href={"/"} asButton={{ variant: "outline" }}>Contact Us</Link>
+      </div>
+    </div>
+    <div class="relative flex-1 rounded-3xl overflow-hidden">
+      <Image src={WavesPattern} alt="banner" class="absolute h-full" />
+      <Image
+        src={bannerImg}
+        alt="banner"
+        class="w-full h-full relative z-10 pt-7"
+      />
+    </div>
+  </div>
+</div>

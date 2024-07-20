@@ -17,6 +17,7 @@ module.exports = {
         secondary: "Abril Fatface",
       },
       colors: {
+        highlight: "var(--highlight)",
         text: "var(--text)",
         heading: "var(--heading)",
         border: "var(--border)",
