@@ -18,10 +18,12 @@ module.exports = {
       },
       colors: {
         text: "var(--text)",
+        heading: "var(--heading)",
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
         background: "var(--background)",
+        "background-secondary": "var(--background-secondary)",
         foreground: "var(--foreground)",
         primary: {
           DEFAULT: "var(--primary)",

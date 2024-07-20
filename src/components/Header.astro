@@ -1,0 +1,33 @@
+---
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "./ui/button"
+
+const links = [
+  { href: "/about", text: "About" },
+  { href: "/coaching", text: "Coaching" },
+  { href: "/Testimonials", text: "Testimonials" },
+  { href: "/team", text: "Team" },
+  { href: "/contact", text: "Contact" },
+]
+---
+
+<nav class="flex container py-4 items-center justify-between">
+  <div class="">
+    <p class="font-secondary text-primary text-xl">BRITTANY JONES</p>
+    <p class="font-primary text-accent uppercase text-[10px] tracking-[0.32em]">
+      Buissness Coaching
+    </p>
+  </div>
+  <div class="flex gap-8 items-center">
+    {
+      links.map((link) => (
+        <a href={link.href} class="text-text text-sm">
+          {link.text}
+        </a>
+      ))
+    }
+    <a href="/login" class={cn(buttonVariants({ variant: "accent" }))}
+      >Register Now</a
+    >
+  </div>
+</nav>

@@ -1,5 +1,6 @@
 ---
-import '@/styles/globals.css'
+import Header from "@/components/Header.astro"
+import "@/styles/globals.css"
 
 const { title = "RLCT" } = Astro.props
 ---
@@ -21,6 +22,7 @@ const { title = "RLCT" } = Astro.props
     <title>{title}</title>
   </head>
   <body>
+    <Header />
     <slot />
   </body>
 </html>

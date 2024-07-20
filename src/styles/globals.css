@@ -5,6 +5,7 @@
 @layer base {
   :root {
     --background: #ffffff;
+    --background-secondary: #effdfc;
     --foreground: #020817;
     --card: #ffffff;
     --card-foreground: #020817;
@@ -30,6 +31,7 @@
     --chart-4: #e8c468;
     --chart-5: #f4a462;
     --text: #7f858d;
+    --heading: #0b0a13;
   }
 
   .dark {
@@ -62,7 +64,15 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border font-primary;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-secondary;
   }
   body {
     @apply bg-background text-foreground;
