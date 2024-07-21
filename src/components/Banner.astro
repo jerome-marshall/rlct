@@ -2,14 +2,13 @@
 import { Image } from "astro:assets"
 import bannerImg from "@/assets/restoreStaffs.png"
 import WavesPattern from "@/assets/waves-pattern.png"
-import { Button } from "@/components/ui/button"
 import Link from "./Link.astro"
 ---
 
-<div class="container module">
+<div class="container module-m">
   <div class="flex items-center gap-32">
     <div class="flex-1">
-      <h1 class="relative text-heading text-5xl font-secondary leading-tight">
+      <h1 class="relative">
         Lifestyle Coaching Can <span
           class="font-secondary text-primary marker-underline"
           >Change Lives</span
@@ -22,8 +21,8 @@ import Link from "./Link.astro"
         diabetes, hypertension and obesity.
       </p>
       <div class="flex pt-8 gap-4">
-        <Link href="/" asButton>View Curriculum</Link>
-        <Link href={"/"} asButton={{ variant: "outline" }}>Contact Us</Link>
+        <Link href="/" asButton={{ variant: "accent" }}>Learn More</Link>
+        <Link href={"/"} asButton={{ variant: "outline" }}>Apply Now</Link>
       </div>
     </div>
     <div class="relative flex-1 rounded-3xl overflow-hidden">
@@ -31,7 +30,7 @@ import Link from "./Link.astro"
       <Image
         src={bannerImg}
         alt="banner"
-        class="w-full h-full relative z-10 pt-7"
+        class="w-full h-full relative z-10 pt-7 object-contain"
       />
     </div>
   </div>

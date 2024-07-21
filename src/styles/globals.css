@@ -6,6 +6,7 @@
   :root {
     --background: #ffffff;
     --background-secondary: #effdfc;
+    --background-tertiary: #e7f0f0;
     --foreground: #020817;
     --card: #ffffff;
     --card-foreground: #020817;
@@ -76,6 +77,14 @@
     @apply font-secondary;
   }
 
+  h1 {
+    @apply text-heading text-5xl font-secondary leading-tight;
+  }
+
+  h2 {
+    @apply text-heading text-4xl font-secondary leading-tight;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -83,6 +92,7 @@
   .marker-underline {
     position: relative;
     display: inline-block;
+    z-index: 10;
   }
 
   .marker-underline::after {
@@ -96,7 +106,15 @@
     z-index: -1;
   }
 
-  .module {
+  p {
+    @apply text-text text-sm leading-relaxed;
+  }
+
+  .module-m {
     @apply my-20;
+  }
+
+  .module-p {
+    @apply py-20;
   }
 }

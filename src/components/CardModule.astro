@@ -1,0 +1,59 @@
+---
+import Card from "./Card.astro"
+import HealthyLifestyleIcon from "@/assets/healthy-lifestyle.svg"
+import LeafIcon from "@/assets/leaf.svg"
+import PrayerIcon from "@/assets/prayer.svg"
+import HealthIcon from "@/assets/health.svg"
+import DartIcon from "@/assets/dart.svg"
+import FamilyPracticeIcon from "@/assets/family-practice.svg"
+
+const cardData = [
+  {
+    title: "Lifestyle Diseases",
+    body: "Master the prevention and reversal of chronic conditions like diabetes, hypertension, and obesity. Learn to identify causes, recognize symptoms, and implement effective lifestyle interventions that can transform lives.",
+    icon: HealthyLifestyleIcon,
+  },
+  {
+    title: "Natural Remedies",
+    body: "Explore the power of nature's pharmacy. Gain hands-on experience with hydrotherapy, herbal treatments, and therapeutic massage techniques. Discover how to harness these gentle yet potent remedies to support healing and wellness.",
+    icon: LeafIcon,
+  },
+  {
+    title: "Spiritual Growth",
+    body: "Nurture the connection between faith and health. Develop skills to address not just physical ailments, but also emotional and spiritual well-being. Learn how to integrate spiritual principles into a holistic approach to healing.",
+    icon: PrayerIcon,
+  },
+  {
+    title: "Health Outreach",
+    body: "Become a catalyst for community wellness. Learn to organize health camps, conduct community surveys, and develop engaging health education programs. Acquire the tools to inspire and empower others to embrace healthier lifestyles.",
+    icon: HealthIcon,
+  },
+  {
+    title: "Practical Skills",
+    body: "Build a robust toolkit for effective health coaching. From basic anatomy and physiology to nutrition and cooking demonstrations, develop the practical skills needed to guide clients towards optimal health with confidence and competence.",
+    icon: DartIcon,
+  },
+  {
+    title: "Client Care",
+    body: "Master the art of compassionate coaching. Learn to conduct thorough lifestyle assessments, set achievable goals, and provide ongoing support. Develop the communication skills needed to motivate and inspire lasting change in your clients' lives.",
+    icon: FamilyPracticeIcon,
+  },
+]
+---
+
+<div class="module-p bg-background-secondary">
+  <div class="container">
+    <h2 class="text-center">
+      Our Coaching <span class="marker-underline font-secondary text-primary"
+        >Solutions</span
+      >
+    </h2>
+    <div class="grid grid-cols-3 pt-12 gap-8">
+      {
+        cardData.map((card) => (
+          <Card title={card.title} body={card.body} icon={card.icon} />
+        ))
+      }
+    </div>
+  </div>
+</div>
