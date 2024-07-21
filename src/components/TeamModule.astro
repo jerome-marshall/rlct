@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets"
+import StaffsImage from "@/assets/rlct-staffs.webp"
+import Link from "./Link.astro"
+
+const stats = [
+  {
+    stat: "15+",
+    title: "Experienced Trainers",
+  },
+  { stat: "6", title: "Batches Completed" },
+  { stat: "100+", title: "Clients Served" },
+]
+---
+
+<div class="container module-m">
+  <div class="flex items-center gap-24 px-20">
+    <div class="relative flex-1 rounded-3xl overflow-hidden">
+      <Image
+        src={StaffsImage}
+        alt="banner"
+        class="w-full h-full object-cover aspect-square"
+      />
+    </div>
+    <div class="flex-1">
+      <h2 class="relative">
+        Meet the Dedicated <br /><span
+          class="font-secondary text-primary marker-underline">RLCT Team</span
+        >
+      </h2>
+      <p class="pt-6 text-sm text-text leading-relaxed">
+        Our trainers include experienced health coaches, doctors, public health
+        educators, pastors, and licensed massage therapists. They bring a wealth
+        of knowledge, compassion, and practical experience to guide you through
+        the program.
+      </p>
+      <div class="h-[1px] bg-border w-full my-8"></div>
+      <div class="flex justify-between gap-6">
+        {
+          stats.map((stat) => (
+            <div class="">
+              <p class="text-heading font-secondary text-4xl">{stat.stat}</p>
+              <p class="text-sm text-text">{stat.title}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
