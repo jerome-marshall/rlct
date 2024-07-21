@@ -3,8 +3,37 @@ import Banner from "@/components/Banner.astro"
 import CardModule from "@/components/CardModule.astro"
 import StepsModule from "@/components/StepsModule.astro"
 import TeamModule from "@/components/TeamModule.astro"
-import { Button } from "@/components/ui/button"
 import Layout from "@/layouts/Layout.astro"
+import Highlights from "@/components/Highlights"
+import { getImage } from "astro:assets"
+
+const images = [
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/qr52ur/orphanage6.jpeg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/qxad3m/orphanage14.jpeg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/s939sy/orphanage8.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/yvdhbi/prepformedcamp1-1.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/8g9x7u/20230423_113001.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/if5v3n/img-20230416-wa0021.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/ahurpr/3cd587c0-5566-4311-a41a-ee09116d19d3.jpg?enable-io=true&enable=upscale&fit=bounds&width=605&height=432",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/m45p6x/28ce414e-07ac-41a8-b78b-676088db3500.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/zic32n/66efed5e-c15b-408d-bd34-b99d1ef4fcf5.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/dv0nck/20230514_095219.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/thbv17/20230514_105459.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/xiznsh/20230514_133151.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/1kqymg/orphanagevisit.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/tio3ga/img-20231008-wa0002.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/v8yg6c/img-20231007-wa0013.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/yzabcq/img-20230830-wa0003.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/52d5e9ed-e328-4d02-a672-49ac4e66be83-high.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/c15c8d69-fbc8-48fa-92ad-3c9c4905aa08-high.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
+  "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/43c4e4a4-6965-43fa-821f-39ebfd9169e0-high-56ug8p.jpg?enable-io=true&enable=upscale&fit=bounds&width=899&height=642",
+]
+
+const optimizedImages = await Promise.all(
+  images.map((image) =>
+    getImage({ src: image, format: "webp", width: 900, height: 643 })
+  )
+)
 ---
 
 <Layout>
@@ -12,4 +41,5 @@ import Layout from "@/layouts/Layout.astro"
   <CardModule />
   <StepsModule />
   <TeamModule />
+  <Highlights client:only="react" images={optimizedImages} />
 </Layout>

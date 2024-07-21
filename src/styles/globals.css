@@ -124,3 +124,9 @@
     @apply py-24;
   }
 }
+
+.highlight-slider-container {
+  .slick-list {
+    overflow: visible;
+  }
+}
