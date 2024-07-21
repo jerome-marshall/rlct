@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets"
+import WavesPattern from "@/assets/waves-pattern.png"
+import AcademicCapIcon from "@/assets/academic-cap.svg"
+import BriefcaseIcon from "@/assets/briefcase.svg"
+import FormIcon from "@/assets/form.svg"
+import { cn } from "@/lib/utils"
+
+const steps = [
+  {
+    title: "Apply Now",
+    content:
+      "Secure your spot in our exclusive program. Limited spaces ensure personalized attention and optimal learning. Don't miss this life-changing opportunity to transform lives.",
+    icon: FormIcon,
+    iconSize: "size-10",
+    iconPadding: "p-6",
+  },
+  {
+    title: "Intensive Training",
+    content:
+      "Dive deep into comprehensive health coaching. Develop expertise in lifestyle medicine, natural remedies, and spiritual wellness through intensive, hands-on learning experiences.",
+    icon: AcademicCapIcon,
+    iconSize: "size-14",
+    iconPadding: "p-4",
+  },
+  {
+    title: "Practical Experience",
+    content:
+      "Put your skills into practice during an immersive practicum. Apply your knowledge in real-world settings, building confidence and competence as a lifestyle coach.",
+    icon: BriefcaseIcon,
+    iconSize: "size-10",
+    iconPadding: "p-6",
+  },
+]
+---
+
+<div class="container module-m">
+  <div class="relative overflow-hidden rounded-3xl">
+    <Image
+      src={WavesPattern}
+      alt="banner"
+      class="absolute top-0 object-cover w-full"
+    />
+    <div class="relative z-10 p-20">
+      <h2 class="text-primary-foreground text-center">
+        Your Path to Becoming a<br /><span
+          class="font-secondary marker-underline after:bg-highlight-dark"
+          >Lifestyle Coach</span
+        >
+      </h2>
+      <div class="grid grid-cols-3 pt-16 gap-12">
+        {
+          steps.map((step, index) => (
+            <div class="relative">
+              <div
+                class={cn(
+                  step.iconPadding,
+                  "bg-background-green rounded-full w-fit"
+                )}
+              >
+                <Image src={step.icon} alt="icon" class={cn(step.iconSize)} />
+              </div>
+              <h3 class="text-primary-foreground pt-7">{`Step ${
+                index + 1
+              }: ${step.title}`}</h3>
+              <p class="pt-3 text-sm text-secondary leading-relaxed">
+                {step.content}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

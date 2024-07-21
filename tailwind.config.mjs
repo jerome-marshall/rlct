@@ -18,6 +18,7 @@ module.exports = {
       },
       colors: {
         highlight: "var(--highlight)",
+        "highlight-dark": "var(--highlight-dark)",
         text: "var(--text)",
         heading: "var(--heading)",
         border: "var(--border)",
@@ -26,6 +27,7 @@ module.exports = {
         background: "var(--background)",
         "background-secondary": "var(--background-secondary)",
         "background-tertiary": "var(--background-tertiary)",
+        "background-green": "var(--background-green)",
         foreground: "var(--foreground)",
         primary: {
           DEFAULT: "var(--primary)",

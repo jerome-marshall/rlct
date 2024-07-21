@@ -10,32 +10,32 @@ import FamilyPracticeIcon from "@/assets/family-practice.svg"
 const cardData = [
   {
     title: "Lifestyle Diseases",
-    body: "Master the prevention and reversal of chronic conditions like diabetes, hypertension, and obesity. Learn to identify causes, recognize symptoms, and implement effective lifestyle interventions that can transform lives.",
+    body: "Learn to prevent and reverse chronic conditions like diabetes and obesity. Identify causes, recognize symptoms, and implement effective lifestyle interventions.",
     icon: HealthyLifestyleIcon,
   },
   {
     title: "Natural Remedies",
-    body: "Explore the power of nature's pharmacy. Gain hands-on experience with hydrotherapy, herbal treatments, and therapeutic massage techniques. Discover how to harness these gentle yet potent remedies to support healing and wellness.",
+    body: "Explore nature's pharmacy with hands-on experience in hydrotherapy, herbal treatments, and therapeutic massage techniques for healing and wellness.",
     icon: LeafIcon,
   },
   {
     title: "Spiritual Growth",
-    body: "Nurture the connection between faith and health. Develop skills to address not just physical ailments, but also emotional and spiritual well-being. Learn how to integrate spiritual principles into a holistic approach to healing.",
+    body: "Connect faith and health. Address physical, emotional, and spiritual well-being. Integrate spiritual principles into a holistic healing approach.",
     icon: PrayerIcon,
   },
   {
     title: "Health Outreach",
-    body: "Become a catalyst for community wellness. Learn to organize health camps, conduct community surveys, and develop engaging health education programs. Acquire the tools to inspire and empower others to embrace healthier lifestyles.",
+    body: "Become a community wellness catalyst. Organize health camps, conduct surveys, and develop education programs to inspire healthier lifestyles.",
     icon: HealthIcon,
   },
   {
     title: "Practical Skills",
-    body: "Build a robust toolkit for effective health coaching. From basic anatomy and physiology to nutrition and cooking demonstrations, develop the practical skills needed to guide clients towards optimal health with confidence and competence.",
+    body: "Develop a health coaching toolkit. Learn anatomy, physiology, nutrition, and cooking to guide clients towards optimal health with confidence.",
     icon: DartIcon,
   },
   {
     title: "Client Care",
-    body: "Master the art of compassionate coaching. Learn to conduct thorough lifestyle assessments, set achievable goals, and provide ongoing support. Develop the communication skills needed to motivate and inspire lasting change in your clients' lives.",
+    body: "Master compassionate coaching. Conduct lifestyle assessments, set goals, and provide support. Develop skills to motivate lasting change in clients.",
     icon: FamilyPracticeIcon,
   },
 ]
@@ -48,7 +48,7 @@ const cardData = [
         >Solutions</span
       >
     </h2>
-    <div class="grid grid-cols-3 pt-12 gap-8">
+    <div class="grid grid-cols-3 pt-16 gap-8">
       {
         cardData.map((card) => (
           <Card title={card.title} body={card.body} icon={card.icon} />
