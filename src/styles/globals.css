@@ -130,3 +130,26 @@
     overflow: visible;
   }
 }
+
+.testimonials-slider {
+  .slick-list {
+    @apply px-[2px] py-[3px];
+
+    .slick-track {
+      @apply -mx-4 flex;
+
+      .slick-slide {
+        @apply flex h-auto px-4;
+      }
+    }
+  }
+
+  .slick-dots {
+    @apply -bottom-14 mt-2;
+
+    li button:before {
+      color: #0c6460;
+      font-size: 8px;
+    }
+  }
+}

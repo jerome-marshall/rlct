@@ -7,6 +7,7 @@ import Layout from "@/layouts/Layout.astro"
 import Highlights from "@/components/Highlights"
 import { getImage } from "astro:assets"
 import MakeDifferenceModule from "@/components/MakeDifferenceModule.astro"
+import Testimonies from "@/components/Testimonies"
 
 const images = [
   "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/qr52ur/orphanage6.jpeg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
@@ -44,4 +45,5 @@ const optimizedImages = await Promise.all(
   <TeamModule />
   <Highlights client:only="react" images={optimizedImages} />
   <MakeDifferenceModule />
+  <Testimonies client:only="react" />
 </Layout>
