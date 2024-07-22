@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets"
+import WavesPattern from "@/assets/waves-pattern.png"
+import { cn } from "@/lib/utils"
+
+interface Props {
+  className?: string
+  wrapperClassName?: string
+}
+
+const { className, wrapperClassName } = Astro.props
+---
+
+<div class={cn("", wrapperClassName)}>
+  <div class={cn("container module-m")}>
+    <div class="relative overflow-hidden rounded-3xl">
+      <Image
+        src={WavesPattern}
+        alt="banner"
+        class="absolute top-0 object-cover w-full"
+      />
+      <div class={cn("relative z-10 p-20", className)}>
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,7 @@ import AcademicCapIcon from "@/assets/academic-cap.svg"
 import BriefcaseIcon from "@/assets/briefcase.svg"
 import FormIcon from "@/assets/form.svg"
 import { cn } from "@/lib/utils"
+import ModuleBackground from "./ModuleBackground.astro"
 
 const steps = [
   {
@@ -34,42 +35,33 @@ const steps = [
 ]
 ---
 
-<div class="container module-m">
-  <div class="relative overflow-hidden rounded-3xl">
-    <Image
-      src={WavesPattern}
-      alt="banner"
-      class="absolute top-0 object-cover w-full"
-    />
-    <div class="relative z-10 p-20">
-      <h2 class="text-primary-foreground text-center">
-        Your Path to Becoming a<br /><span
-          class="font-secondary marker-underline after:bg-highlight-dark"
-          >Lifestyle Coach</span
-        >
-      </h2>
-      <div class="grid grid-cols-3 pt-16 gap-12">
-        {
-          steps.map((step, index) => (
-            <div class="relative">
-              <div
-                class={cn(
-                  step.iconPadding,
-                  "bg-background-green rounded-full w-fit"
-                )}
-              >
-                <Image src={step.icon} alt="icon" class={cn(step.iconSize)} />
-              </div>
-              <h3 class="text-primary-foreground pt-7">{`Step ${
-                index + 1
-              }: ${step.title}`}</h3>
-              <p class="pt-3 text-sm text-secondary leading-relaxed">
-                {step.content}
-              </p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
+<ModuleBackground>
+  <h2 class="text-primary-foreground text-center">
+    Your Path to Becoming a<br /><span
+      class="font-secondary marker-underline after:bg-highlight-dark"
+      >Lifestyle Coach</span
+    >
+  </h2>
+  <div class="grid grid-cols-3 pt-16 gap-12">
+    {
+      steps.map((step, index) => (
+        <div class="relative">
+          <div
+            class={cn(
+              step.iconPadding,
+              "bg-background-green rounded-full w-fit"
+            )}
+          >
+            <Image src={step.icon} alt="icon" class={cn(step.iconSize)} />
+          </div>
+          <h3 class="text-primary-foreground pt-7">{`Step ${
+            index + 1
+          }: ${step.title}`}</h3>
+          <p class="pt-3 text-sm text-secondary leading-relaxed">
+            {step.content}
+          </p>
+        </div>
+      ))
+    }
   </div>
-</div>
+</ModuleBackground>
