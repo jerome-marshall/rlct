@@ -22,7 +22,7 @@ const Highlights = ({ images }: { images: GetImageResult[] }) => {
   }
 
   return (
-    <div className="module-m">
+    <div className="module-m overflow-hidden">
       <h2 className="text-center">
         Training{" "}
         <span className="marker-underline font-secondary text-primary">
