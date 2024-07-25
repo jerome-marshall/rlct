@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Sheet,
   SheetClose,
@@ -8,11 +8,11 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
-import { links } from "@/lib/constants"
-import { cn } from "@/lib/utils"
-import { MenuIcon } from "lucide-react"
-import logo from "@/assets/restore.webp"
+} from "@/components/ui/sheet";
+import { links } from "@/lib/constants";
+import { cn } from "@/lib/utils";
+import { MenuIcon } from "lucide-react";
+import logo from "@/assets/restore.webp";
 
 export default function BurgerMenu() {
   return (
@@ -23,7 +23,7 @@ export default function BurgerMenu() {
         </div>
       </SheetTrigger>
       <SheetContent className="w-full">
-        <SheetHeader className="border-b border-border pb-4 flex items-center justify-between">
+        <SheetHeader className="flex items-center justify-between border-b border-border pb-4">
           <img src={logo.src} alt="Logo" className="w-36 md:w-36" />
         </SheetHeader>
         <div className="grid gap-4 py-4">
@@ -40,5 +40,5 @@ export default function BurgerMenu() {
         </SheetFooter>
       </SheetContent>
     </Sheet>
-  )
+  );
 }

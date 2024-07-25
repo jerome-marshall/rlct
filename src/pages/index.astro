@@ -1,14 +1,14 @@
 ---
-import Banner from "@/components/Banner.astro"
-import CardModule from "@/components/CardModule.astro"
-import StepsModule from "@/components/StepsModule.astro"
-import TeamModule from "@/components/TeamModule.astro"
-import Layout from "@/layouts/Layout.astro"
-import Highlights from "@/components/Highlights"
-import { getImage } from "astro:assets"
-import MakeDifferenceModule from "@/components/MakeDifferenceModule.astro"
-import Testimonies from "@/components/Testimonies"
-import Footer from "@/components/Footer.astro"
+import Banner from "@/components/Banner.astro";
+import CardModule from "@/components/CardModule.astro";
+import StepsModule from "@/components/StepsModule.astro";
+import TeamModule from "@/components/TeamModule.astro";
+import Layout from "@/layouts/Layout.astro";
+import Highlights from "@/components/Highlights";
+import { getImage } from "astro:assets";
+import MakeDifferenceModule from "@/components/MakeDifferenceModule.astro";
+import Testimonies from "@/components/Testimonies";
+import Footer from "@/components/Footer.astro";
 
 const images = [
   "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/qr52ur/orphanage6.jpeg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
@@ -30,13 +30,13 @@ const images = [
   "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/52d5e9ed-e328-4d02-a672-49ac4e66be83-high.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
   "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/c15c8d69-fbc8-48fa-92ad-3c9c4905aa08-high.jpg?enable-io=true&enable=upscale&fit=bounds&width=900&height=643",
   "https://primary.jwwb.nl/public/i/s/s/temp-pngwxxidlofdmrlcdpbo/43c4e4a4-6965-43fa-821f-39ebfd9169e0-high-56ug8p.jpg?enable-io=true&enable=upscale&fit=bounds&width=899&height=642",
-]
+];
 
 const optimizedImages = await Promise.all(
   images.map((image) =>
-    getImage({ src: image, format: "webp", width: 900, height: 643 })
-  )
-)
+    getImage({ src: image, format: "webp", width: 900, height: 643 }),
+  ),
+);
 ---
 
 <Layout>

@@ -1,6 +1,6 @@
-import React from "react"
-import quote from "@/assets/quote.svg"
-import Slider from "react-slick"
+import React from "react";
+import quote from "@/assets/quote.svg";
+import Slider from "react-slick";
 
 interface TestimoniesProps {}
 
@@ -46,7 +46,7 @@ const Testimonies = () => {
       quote:
         "In this course I learned many things which I already knew but I have realized the application in my life. One thing was that I knew about the Sanctuary but I never understood and felt the need of it in my life.  I always thought it was a ritual in olden days. Here I came to know that it should be applied in my life today.",
     },
-  ]
+  ];
 
   const commonSettings: React.ComponentProps<typeof Slider> = {
     dots: true,
@@ -55,44 +55,58 @@ const Testimonies = () => {
     slidesToScroll: 1,
     speed: 1000,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     cssEase: "ease",
     centerPadding: "24px",
-  }
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
 
   return (
     <div className="module-p bg-background-secondary">
       <div className="container">
         <h2 className="relative text-center">
-          <span className="font-secondary text-primary marker-underline">
+          <span className="marker-underline font-secondary text-primary">
             Testimonial
           </span>{" "}
           Spotlight
           <br />
         </h2>
-        <p className="max-w-[700px] pt-6 text-center mx-auto">
+        <p className="mx-auto max-w-[700px] pt-6 text-center">
           Discover how this course has transformed lives through personal
           stories and impactful experiences. See how our holistic approach to
           health ministry fosters growth and achievement.
         </p>
-        <div className="pt-14 testimonials-slider">
+        <div className="testimonials-slider pt-10 md:pt-14">
           <Slider {...commonSettings} className="">
             {testimonials.map((testimonial) => (
-              <div className="relative bg-background p-6 rounded-xl shadow-md h-full">
-                <div className="border-b border-border pb-4 flex items-center justify-between">
+              <div className="relative h-full rounded-xl bg-background p-6 shadow-md">
+                <div className="flex items-center justify-between border-b border-border pb-4">
                   <div className="flex items-center">
-                    <div className="relative rounded-full overflow-hidden bg-background-green size-14 flex items-center justify-center mr-4 shadow-sm">
+                    <div className="relative mr-4 flex size-14 items-center justify-center overflow-hidden rounded-full bg-background-green shadow-sm">
                       {testimonial.image ? (
                         <img
                           src={testimonial.image}
                           alt="testimonial"
-                          className="w-full h-full rounded-full"
+                          className="h-full w-full rounded-full"
                           width={64}
                           height={64}
                         />
                       ) : (
-                        <p className="uppercase text-lg font-secondary text-primary-foreground">
+                        <p className="font-secondary text-lg uppercase text-primary-foreground">
                           {testimonial.name
                             .split(" ")
                             .map((name) => name[0])
@@ -101,17 +115,17 @@ const Testimonies = () => {
                       )}
                     </div>
                     <div>
-                      <h3 className="leading-none text-lg">
+                      <h3 className="text-lg leading-none">
                         {testimonial.name}
                       </h3>
-                      <p className="text-xs text-primary pt-1 font-semibold">
+                      <p className="pt-1 text-xs font-semibold text-primary">
                         {testimonial.title}
                       </p>
                     </div>
                   </div>
                   <img src={quote.src} alt="quote" className="size-10" />
                 </div>
-                <p className="pt-4 text-ellipsis overflow-hidden line-clamp-[8]">
+                <p className="line-clamp-[8] overflow-hidden text-ellipsis pt-4">
                   {testimonial.quote}
                 </p>
               </div>
@@ -120,7 +134,7 @@ const Testimonies = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Testimonies
+export default Testimonies;

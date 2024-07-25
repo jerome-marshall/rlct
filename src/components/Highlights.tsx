@@ -1,6 +1,6 @@
-import type { GetImageResult } from "astro"
-import React from "react"
-import Slider from "react-slick"
+import type { GetImageResult } from "astro";
+import React from "react";
+import Slider from "react-slick";
 
 const Highlights = ({ images }: { images: GetImageResult[] }) => {
   const commonSettings: React.ComponentProps<typeof Slider> = {
@@ -14,12 +14,26 @@ const Highlights = ({ images }: { images: GetImageResult[] }) => {
     cssEase: "linear",
     pauseOnHover: false,
     centerPadding: "24px",
-  }
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  };
 
   const settingsRTL: React.ComponentProps<typeof Slider> = {
     ...commonSettings,
     rtl: true,
-  }
+  };
 
   return (
     <div className="module-m overflow-hidden">
@@ -42,17 +56,17 @@ const Highlights = ({ images }: { images: GetImageResult[] }) => {
         </Slider>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const RenderImage = ({ image }: { image: GetImageResult }) => {
   return (
     <div className="px-2">
-      <div className="rounded-xl overflow-hidden aspect-square">
-        <img src={image.src} className="w-full h-full object-cover" />
+      <div className="aspect-square overflow-hidden rounded-xl">
+        <img src={image.src} className="h-full w-full object-cover" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Highlights
+export default Highlights;

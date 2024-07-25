@@ -1,39 +1,39 @@
 ---
-import { Image } from "astro:assets"
-import WavesPattern from "@/assets/waves-pattern.png"
-import { cn } from "@/lib/utils"
-import logo from "@/assets/restore.webp"
-import { links } from "@/lib/constants"
-import { MailIcon, PhoneIcon } from "lucide-react"
+import { Image } from "astro:assets";
+import WavesPattern from "@/assets/waves-pattern.png";
+import { cn } from "@/lib/utils";
+import logo from "@/assets/restore.webp";
+import { links } from "@/lib/constants";
+import { MailIcon, PhoneIcon } from "lucide-react";
 
 interface Props {
-  className?: string
-  wrapperClassName?: string
+  className?: string;
+  wrapperClassName?: string;
 }
 
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 ---
 
 <div class="relative overflow-hidden">
   <Image
     src={WavesPattern}
     alt="banner"
-    class="absolute top-0 object-cover w-full"
+    class="absolute top-0 size-full object-cover"
   />
   <div
     class={cn(
-      "relative z-10 container py-20 flex flex-col items-center justify-between"
+      "relative z-10 container py-20 flex flex-col items-center justify-between",
     )}
   >
-    <a href="/" class="bg-white w-fit p-4 rounded-full">
-      <Image src={logo} alt="Logo" class="w-40" />
+    <a href="/" class="w-fit rounded-full bg-white p-4">
+      <Image src={logo} alt="Logo" class="w-32 md:w-40" />
     </a>
-    <div class="mt-8 flex gap-8">
+    <div class="mt-6 grid grid-cols-2 gap-8 gap-x-20 gap-y-2 md:mt-8 md:flex">
       {
         links.map((link, index) => (
           <a
             href={link.href}
-            class="text text-highlight hover:text-secondary font-semibold"
+            class="text font-semibold text-highlight hover:text-secondary"
           >
             {link.text}
           </a>
@@ -43,16 +43,16 @@ const currentYear = new Date().getFullYear()
     <div class="mt-8 flex flex-col items-center gap-3">
       <a
         href="mailto:RestoreLCT@gmail.com"
-        class="flex items-center gap-2 text-highlight group"
+        class="group flex items-center gap-2 text-highlight"
       >
         <MailIcon className="size-5 text-highlight" />
-        <p class="ml-2 text-highlight font-semibold group-hover:text-secondary">
+        <p class="ml-2 font-semibold text-highlight group-hover:text-secondary">
           RestoreLCT@gmail.com
         </p>
       </a>
-      <a href="tel:+919655839776" class="flex items-center gap-2 group">
+      <a href="tel:+919655839776" class="group flex items-center gap-2">
         <PhoneIcon className="size-5 text-highlight" />
-        <p class="ml-2 text-highlight font-semibold group-hover:text-secondary">
+        <p class="ml-2 font-semibold text-highlight group-hover:text-secondary">
           +919655839776
         </p>
       </a>

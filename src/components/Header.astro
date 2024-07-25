@@ -1,23 +1,23 @@
 ---
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "./ui/button"
-import { Image } from "astro:assets"
-import logo from "@/assets/restore.webp"
-import { links } from "@/lib/constants"
-import BurgerMenu from "./BurgerMenu"
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "./ui/button";
+import { Image } from "astro:assets";
+import logo from "@/assets/restore.webp";
+import { links } from "@/lib/constants";
+import BurgerMenu from "./BurgerMenu";
 ---
 
 <nav
-  class="flex container items-center justify-between shadow-md fixed top-0 left-0 right-0 z-50 bg-white h-[var(--header-height)] py-3"
+  class="container fixed left-0 right-0 top-0 z-50 flex h-[var(--header-height)] items-center justify-between bg-white py-3 shadow-md"
 >
-  <a href="/" class="flex items-center h-full">
-    <Image src={logo} alt="Logo" class="object-contain w-fit h-full" />
+  <a href="/" class="flex h-full items-center">
+    <Image src={logo} alt="Logo" class="h-full w-fit object-contain" />
   </a>
   <BurgerMenu client:only="react" />
-  <div class="md:flex gap-8 items-center hidden">
+  <div class="hidden items-center gap-8 md:flex">
     {
       links.map((link) => (
-        <a href={link.href} class="text-text text-sm">
+        <a href={link.href} class="text-sm text-text">
           {link.text}
         </a>
       ))

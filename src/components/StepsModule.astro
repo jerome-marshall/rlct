@@ -1,11 +1,11 @@
 ---
-import { Image } from "astro:assets"
-import WavesPattern from "@/assets/waves-pattern.png"
-import AcademicCapIcon from "@/assets/academic-cap.svg"
-import BriefcaseIcon from "@/assets/briefcase.svg"
-import FormIcon from "@/assets/form.svg"
-import { cn } from "@/lib/utils"
-import ModuleBackground from "./ModuleBackground.astro"
+import { Image } from "astro:assets";
+import WavesPattern from "@/assets/waves-pattern.png";
+import AcademicCapIcon from "@/assets/academic-cap.svg";
+import BriefcaseIcon from "@/assets/briefcase.svg";
+import FormIcon from "@/assets/form.svg";
+import { cn } from "@/lib/utils";
+import ModuleBackground from "./ModuleBackground.astro";
 
 const steps = [
   {
@@ -13,7 +13,7 @@ const steps = [
     content:
       "Secure your spot in our exclusive program. Limited spaces ensure personalized attention and optimal learning. Don't miss this life-changing opportunity to transform lives.",
     icon: FormIcon,
-    iconSize: "size-10",
+    iconSize: "size-8 md:size-9 lg:size-10",
     iconPadding: "p-6",
   },
   {
@@ -21,7 +21,7 @@ const steps = [
     content:
       "Dive deep into comprehensive health coaching. Develop expertise in lifestyle medicine, natural remedies, and spiritual wellness through intensive, hands-on learning experiences.",
     icon: AcademicCapIcon,
-    iconSize: "size-14",
+    iconSize: "size-12 md:size-13 lg:size-14",
     iconPadding: "p-4",
   },
   {
@@ -29,35 +29,37 @@ const steps = [
     content:
       "Put your skills into practice during an immersive practicum. Apply your knowledge in real-world settings, building confidence and competence as a lifestyle coach.",
     icon: BriefcaseIcon,
-    iconSize: "size-10",
+    iconSize: "size-8 md:size-9 lg:size-10",
     iconPadding: "p-6",
   },
-]
+];
 ---
 
 <ModuleBackground>
-  <h2 class="text-primary-foreground text-center">
+  <h2 class="text-center text-primary-foreground">
     Your Path to Becoming a<br /><span
-      class="font-secondary marker-underline after:bg-highlight-dark"
+      class="marker-underline font-secondary after:bg-highlight-dark"
       >Lifestyle Coach</span
     >
   </h2>
-  <div class="grid grid-cols-3 pt-16 gap-12">
+  <div
+    class="grid grid-cols-1 gap-10 pt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+  >
     {
       steps.map((step, index) => (
         <div class="relative">
           <div
             class={cn(
               step.iconPadding,
-              "bg-background-green rounded-full w-fit"
+              "w-fit rounded-full bg-background-green",
             )}
           >
             <Image src={step.icon} alt="icon" class={cn(step.iconSize)} />
           </div>
-          <h3 class="text-primary-foreground pt-7">{`Step ${
+          <h3 class="pt-7 text-primary-foreground">{`Step ${
             index + 1
           }: ${step.title}`}</h3>
-          <p class="pt-3 text-sm text-secondary leading-relaxed">
+          <p class="pt-3 text-sm leading-relaxed text-secondary">
             {step.content}
           </p>
         </div>

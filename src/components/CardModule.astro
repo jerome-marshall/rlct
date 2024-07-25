@@ -1,11 +1,11 @@
 ---
-import Card from "./Card.astro"
-import HealthyLifestyleIcon from "@/assets/healthy-lifestyle.svg"
-import LeafIcon from "@/assets/leaf.svg"
-import PrayerIcon from "@/assets/prayer.svg"
-import HealthIcon from "@/assets/health.svg"
-import DartIcon from "@/assets/dart.svg"
-import FamilyPracticeIcon from "@/assets/family-practice.svg"
+import Card from "./Card.astro";
+import HealthyLifestyleIcon from "@/assets/healthy-lifestyle.svg";
+import LeafIcon from "@/assets/leaf.svg";
+import PrayerIcon from "@/assets/prayer.svg";
+import HealthIcon from "@/assets/health.svg";
+import DartIcon from "@/assets/dart.svg";
+import FamilyPracticeIcon from "@/assets/family-practice.svg";
 
 const cardData = [
   {
@@ -38,7 +38,7 @@ const cardData = [
     body: "Master compassionate coaching. Conduct lifestyle assessments, set goals, and provide support. Develop skills to motivate lasting change in clients.",
     icon: FamilyPracticeIcon,
   },
-]
+];
 ---
 
 <div class="module-p bg-background-secondary">
@@ -49,7 +49,7 @@ const cardData = [
       >
     </h2>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-10 md:pt-12 lg:pt-16 gap-6 md:gap-8"
+      class="grid grid-cols-1 gap-6 pt-10 md:grid-cols-2 md:gap-8 md:pt-12 lg:grid-cols-3 lg:pt-16"
     >
       {
         cardData.map((card) => (

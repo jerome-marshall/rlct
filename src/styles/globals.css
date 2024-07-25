@@ -115,7 +115,14 @@
   }
 
   h3 {
-    @apply text-heading font-secondary text-xl tracking-wide;
+    color: theme("colors.heading");
+    font-size: theme("fontSize.lg");
+    line-height: 1.75rem;
+    letter-spacing: theme("letterSpacing.wide");
+
+    @media screen and (min-width: 768px) {
+      font-size: theme("fontSize.xl");
+    }
   }
 
   body {
@@ -140,7 +147,7 @@
   }
 
   p {
-    @apply text-text text-sm leading-relaxed;
+    @apply text-sm leading-relaxed text-text;
   }
 
   .module-m {
@@ -148,6 +155,11 @@
     margin-bottom: 4rem;
 
     @media screen and (min-width: 768px) {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
       margin-top: 6rem;
       margin-bottom: 6rem;
     }
@@ -158,6 +170,11 @@
     padding-bottom: 4rem;
 
     @media screen and (min-width: 768px) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
       padding-top: 6rem;
       padding-bottom: 6rem;
     }
@@ -175,16 +192,16 @@
     @apply px-[2px] py-[3px];
 
     .slick-track {
-      @apply -mx-4 flex;
+      @apply flex;
 
       .slick-slide {
-        @apply flex h-auto px-4;
+        @apply flex h-auto px-1.5 md:px-4;
       }
     }
   }
 
   .slick-dots {
-    @apply mt-4 relative;
+    @apply relative lg:mt-3;
 
     li button:before {
       color: #0c6460;

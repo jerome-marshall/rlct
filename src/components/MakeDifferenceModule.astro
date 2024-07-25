@@ -1,25 +1,19 @@
 ---
-import { Image } from "astro:assets"
-import WavesPattern from "@/assets/waves-pattern.png"
-import AcademicCapIcon from "@/assets/academic-cap.svg"
-import BriefcaseIcon from "@/assets/briefcase.svg"
-import FormIcon from "@/assets/form.svg"
-import { cn } from "@/lib/utils"
-import ModuleBackground from "./ModuleBackground.astro"
-import Link from "./Link.astro"
+import ModuleBackground from "./ModuleBackground.astro";
+import Link from "./Link.astro";
 ---
 
 <ModuleBackground
-  wrapperClassName="px-20"
-  className="flex flex-col justify-center items-center w-full"
+  wrapperClassName="lg:px-20"
+  className="flex w-full flex-col items-center justify-center"
 >
-  <h2 class="text-primary-foreground text-center">
+  <h2 class="text-center text-primary-foreground">
     Ready to <br /><span
-      class="font-secondary marker-underline after:bg-highlight-dark"
+      class="marker-underline font-secondary after:bg-highlight-dark"
       >Make a Difference?</span
     >
   </h2>
-  <p class="max-w-[600px] text-secondary leading-relaxed pt-6 text-center">
+  <p class="max-w-[600px] pt-6 text-center leading-relaxed text-secondary">
     Join our next training session to become a lifestyle coach. Gain skills to
     transform lives through holistic health ministry. Start your journey today
     and make a meaningful impact.

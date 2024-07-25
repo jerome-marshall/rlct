@@ -1,7 +1,7 @@
 ---
-import { Image } from "astro:assets"
-import StaffsImage from "@/assets/rlct-staffs.webp"
-import Link from "./Link.astro"
+import { Image } from "astro:assets";
+import StaffsImage from "@/assets/rlct-staffs.webp";
+import Link from "./Link.astro";
 
 const stats = [
   {
@@ -10,36 +10,38 @@ const stats = [
   },
   { stat: "6", title: "Batches Completed" },
   { stat: "100+", title: "Clients Served" },
-]
+];
 ---
 
-<div class="container module-m">
-  <div class="flex items-center gap-24 px-20">
-    <div class="relative flex-1 rounded-3xl overflow-hidden">
+<div class="module-m container">
+  <div class="grid items-center gap-8 md:flex lg:gap-24 lg:px-20">
+    <div class="relative flex-1 overflow-hidden rounded-3xl">
       <Image
         src={StaffsImage}
         alt="banner"
-        class="w-full h-full object-cover aspect-square"
+        class="aspect-square h-full max-h-[320px] w-full object-cover"
       />
     </div>
     <div class="flex-1">
       <h2 class="relative">
         Meet the Dedicated <br /><span
-          class="font-secondary text-primary marker-underline">RLCT Team</span
+          class="marker-underline font-secondary text-primary">RLCT Team</span
         >
       </h2>
-      <p class="pt-6 text-sm text-text leading-relaxed">
+      <p class="pt-4 text-sm leading-relaxed text-text md:pt-6">
         Our trainers include experienced health coaches, doctors, public health
         educators, pastors, and licensed massage therapists. They bring a wealth
         of knowledge, compassion, and practical experience to guide you through
         the program.
       </p>
-      <div class="h-[1px] bg-border w-full my-8"></div>
+      <div class="my-6 h-[1px] w-full bg-border md:my-8"></div>
       <div class="flex justify-between gap-6">
         {
           stats.map((stat) => (
             <div class="">
-              <p class="text-heading font-secondary text-4xl">{stat.stat}</p>
+              <p class="font-secondary text-3xl text-heading md:text-4xl">
+                {stat.stat}
+              </p>
               <p class="text-sm text-text">{stat.title}</p>
             </div>
           ))
@@ -47,7 +49,7 @@ const stats = [
       </div>
     </div>
   </div>
-  <div class="px-20">
+  <div class="px-12 md:px-16 lg:px-20">
     <div class="module-m border-b border-border"></div>
   </div>
 </div>
