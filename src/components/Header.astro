@@ -3,14 +3,7 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "./ui/button"
 import { Image } from "astro:assets"
 import logo from "@/assets/restore.webp"
-
-const links = [
-  { href: "/about", text: "About" },
-  { href: "/coaching", text: "Coaching" },
-  { href: "/Testimonials", text: "Testimonials" },
-  { href: "/team", text: "Team" },
-  { href: "/contact", text: "Contact" },
-]
+import { links } from "@/lib/constants"
 ---
 
 <nav class="flex container py-4 items-center justify-between">

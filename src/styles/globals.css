@@ -145,7 +145,7 @@
   }
 
   .slick-dots {
-    @apply -bottom-14 mt-2;
+    @apply mt-4 relative;
 
     li button:before {
       color: #0c6460;

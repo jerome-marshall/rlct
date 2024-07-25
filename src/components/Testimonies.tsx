@@ -64,19 +64,19 @@ const Testimonies = () => {
   return (
     <div className="module-p bg-background-secondary">
       <div className="container">
-        <h2 className="relative">
+        <h2 className="relative text-center">
           <span className="font-secondary text-primary marker-underline">
             Testimonial
           </span>{" "}
           Spotlight
           <br />
         </h2>
-        <p className="max-w-[700px] pt-4">
+        <p className="max-w-[700px] pt-6 text-center mx-auto">
           Discover how this course has transformed lives through personal
           stories and impactful experiences. See how our holistic approach to
           health ministry fosters growth and achievement.
         </p>
-        <div className="pt-12 testimonials-slider">
+        <div className="pt-14 testimonials-slider">
           <Slider {...commonSettings} className="">
             {testimonials.map((testimonial) => (
               <div className="relative bg-background p-6 rounded-xl shadow-md h-full">

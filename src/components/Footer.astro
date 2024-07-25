@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets"
+import WavesPattern from "@/assets/waves-pattern.png"
+import { cn } from "@/lib/utils"
+import logo from "@/assets/restore.webp"
+import { links } from "@/lib/constants"
+import { MailIcon, PhoneIcon } from "lucide-react"
+
+interface Props {
+  className?: string
+  wrapperClassName?: string
+}
+
+const currentYear = new Date().getFullYear()
+---
+
+<div class="relative overflow-hidden">
+  <Image
+    src={WavesPattern}
+    alt="banner"
+    class="absolute top-0 object-cover w-full"
+  />
+  <div
+    class={cn(
+      "relative z-10 container py-20 flex flex-col items-center justify-between"
+    )}
+  >
+    <a href="/" class="bg-white w-fit p-4 rounded-full">
+      <Image src={logo} alt="Logo" class="w-40" />
+    </a>
+    <div class="mt-8 flex gap-8">
+      {
+        links.map((link, index) => (
+          <a
+            href={link.href}
+            class="text text-highlight hover:text-secondary font-semibold"
+          >
+            {link.text}
+          </a>
+        ))
+      }
+    </div>
+    <div class="mt-8 flex flex-col items-center gap-3">
+      <a
+        href="mailto:RestoreLCT@gmail.com"
+        class="flex items-center gap-2 text-highlight group"
+      >
+        <MailIcon className="size-5 text-highlight" />
+        <p class="ml-2 text-highlight font-semibold group-hover:text-secondary">
+          RestoreLCT@gmail.com
+        </p>
+      </a>
+      <a href="tel:+919655839776" class="flex items-center gap-2 group">
+        <PhoneIcon className="size-5 text-highlight" />
+        <p class="ml-2 text-highlight font-semibold group-hover:text-secondary">
+          +919655839776
+        </p>
+      </a>
+    </div>
+    <p class="mt-10 text-highlight opacity-70">
+      Copyright © {currentYear} RLCT. All rights reserved.
+    </p>
+  </div>
+</div>
