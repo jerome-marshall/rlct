@@ -48,7 +48,9 @@ const cardData = [
         >Solutions</span
       >
     </h2>
-    <div class="grid grid-cols-3 pt-16 gap-8">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-10 md:pt-12 lg:pt-16 gap-6 md:gap-8"
+    >
       {
         cardData.map((card) => (
           <Card title={card.title} body={card.body} icon={card.icon} />

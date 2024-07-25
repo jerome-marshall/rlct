@@ -100,7 +100,18 @@
   }
 
   h2 {
-    @apply text-heading text-4xl font-secondary leading-tight;
+    color: theme("colors.heading");
+    font-size: theme("fontSize.3xl");
+    line-height: theme("lineHeight.tight");
+    font-family: theme("fontFamily.secondary");
+
+    @media screen and (min-width: 768px) {
+      font-size: theme("fontSize.4xl");
+    }
+    /* 
+    @media screen and (min-width: 1024px) {
+      font-size: 3rem;
+    } */
   }
 
   h3 {
