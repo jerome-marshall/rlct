@@ -8,10 +8,10 @@ import BurgerMenu from "./BurgerMenu"
 ---
 
 <nav
-  class="flex container py-4 items-center justify-between shadow-md fixed top-0 left-0 right-0 z-50 bg-white"
+  class="flex container items-center justify-between shadow-md fixed top-0 left-0 right-0 z-50 bg-white h-[var(--header-height)] py-3"
 >
-  <a href="/" class="flex items-center">
-    <Image src={logo} alt="Logo" class="w-32 md:w-36" />
+  <a href="/" class="flex items-center h-full">
+    <Image src={logo} alt="Logo" class="object-contain w-fit h-full" />
   </a>
   <BurgerMenu client:only="react" />
   <div class="md:flex gap-8 items-center hidden">
