@@ -28,9 +28,11 @@ export default function BurgerMenu() {
         </SheetHeader>
         <div className="grid gap-4 py-4">
           {links.map((link) => (
-            <a href={link.href} className="text-text">
-              {link.text}
-            </a>
+            <SheetClose asChild>
+              <a href={link.href} className="text-text">
+                {link.text}
+              </a>
+            </SheetClose>
           ))}
         </div>
         <SheetFooter className="mt-5">

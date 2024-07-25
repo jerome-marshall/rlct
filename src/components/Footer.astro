@@ -14,7 +14,7 @@ interface Props {
 const currentYear = new Date().getFullYear();
 ---
 
-<div class="relative overflow-hidden">
+<div class="relative overflow-hidden" id="footer">
   <Image
     src={WavesPattern}
     alt="banner"
@@ -49,7 +49,7 @@ const currentYear = new Date().getFullYear();
       >
         <MailIcon className="size-5 text-highlight" />
         <p
-          class="ml-1 font-bold text-highlight underline-offset-2 group-hover:text-secondary group-hover:underline"
+          class="ml-1 font-normal text-highlight underline-offset-2 group-hover:text-secondary group-hover:underline lg:text-base"
         >
           RestoreLCT@gmail.com
         </p>
@@ -57,7 +57,7 @@ const currentYear = new Date().getFullYear();
       <a href="tel:+919655839776" class="group flex items-center gap-2">
         <PhoneIcon className="size-5 text-highlight" />
         <p
-          class="ml-1 font-bold text-highlight underline-offset-2 group-hover:text-secondary group-hover:underline"
+          class="ml-1 font-normal text-highlight underline-offset-2 group-hover:text-secondary group-hover:underline lg:text-base"
         >
           +91 9655839776
         </p>

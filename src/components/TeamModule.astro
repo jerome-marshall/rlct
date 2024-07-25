@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import StaffsImage from "@/assets/rlct-staffs.webp";
-import Link from "./Link.astro";
 
 const stats = [
   {
@@ -13,43 +12,45 @@ const stats = [
 ];
 ---
 
-<div class="module-m container">
-  <div class="grid items-center gap-8 md:flex lg:gap-24 lg:px-20">
-    <div class="relative flex-1 overflow-hidden rounded-3xl">
-      <Image
-        src={StaffsImage}
-        alt="banner"
-        class="aspect-square h-full max-h-[320px] w-full object-cover md:max-h-[400px]"
-      />
-    </div>
-    <div class="flex-1">
-      <h2 class="relative">
-        Meet the Dedicated <br /><span
-          class="marker-underline font-secondary text-primary">RLCT Team</span
-        >
-      </h2>
-      <p class="pt-4 text-sm leading-relaxed text-text md:pt-6">
-        Our trainers include experienced health coaches, doctors, public health
-        educators, pastors, and licensed massage therapists. They bring a wealth
-        of knowledge, compassion, and practical experience to guide you through
-        the program.
-      </p>
-      <div class="my-6 h-[1px] w-full bg-border md:my-8"></div>
-      <div class="flex justify-between gap-6">
-        {
-          stats.map((stat) => (
-            <div class="">
-              <p class="font-secondary text-3xl text-heading md:text-4xl">
-                {stat.stat}
-              </p>
-              <p class="text-sm text-text">{stat.title}</p>
-            </div>
-          ))
-        }
+<div class="scroll-margin-m" id="team">
+  <div class="module-m containe">
+    <div class="grid items-center gap-8 md:flex lg:gap-24 lg:px-20">
+      <div class="relative flex-1 overflow-hidden rounded-3xl">
+        <Image
+          src={StaffsImage}
+          alt="banner"
+          class="aspect-square h-full max-h-[320px] w-full object-cover md:max-h-[400px]"
+        />
+      </div>
+      <div class="flex-1">
+        <h2 class="relative">
+          Meet the Dedicated <br /><span
+            class="marker-underline font-secondary text-primary">RLCT Team</span
+          >
+        </h2>
+        <p class="pt-4 text-sm leading-relaxed text-text md:pt-6">
+          Our trainers include experienced health coaches, doctors, public
+          health educators, pastors, and licensed massage therapists. They bring
+          a wealth of knowledge, compassion, and practical experience to guide
+          you through the program.
+        </p>
+        <div class="my-6 h-[1px] w-full bg-border md:my-8"></div>
+        <div class="flex justify-between gap-6">
+          {
+            stats.map((stat) => (
+              <div class="">
+                <p class="font-secondary text-3xl text-heading md:text-4xl">
+                  {stat.stat}
+                </p>
+                <p class="text-sm text-text">{stat.title}</p>
+              </div>
+            ))
+          }
+        </div>
       </div>
     </div>
-  </div>
-  <div class="px-12 md:px-16 lg:px-20">
-    <div class="module-m border-b border-border"></div>
+    <div class="px-12 md:px-16 lg:px-20">
+      <div class="module-m border-b border-border"></div>
+    </div>
   </div>
 </div>

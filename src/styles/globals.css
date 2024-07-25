@@ -150,6 +150,14 @@
     z-index: -1;
   }
 
+  .scroll-margin-m {
+    scroll-margin-top: calc(2 * var(--header-height));
+  }
+
+  .scroll-margin-p {
+    scroll-margin-top: var(--header-height);
+  }
+
   p {
     @apply text-sm leading-relaxed text-text;
   }

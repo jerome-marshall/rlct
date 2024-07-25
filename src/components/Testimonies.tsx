@@ -76,7 +76,10 @@ const Testimonies = () => {
   };
 
   return (
-    <div className="module-p bg-background-secondary">
+    <div
+      className="module-p scroll-margin-p bg-background-secondary"
+      id="testimonials"
+    >
       <div className="container">
         <h2 className="relative text-center">
           <span className="marker-underline font-secondary text-primary">
