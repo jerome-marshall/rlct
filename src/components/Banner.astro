@@ -5,7 +5,7 @@ import WavesPattern from "@/assets/waves-pattern.png";
 import Link from "./Link.astro";
 ---
 
-<div class="module-m container mt-12 md:mt-20 lg:mt-24">
+<div class="module-m container mt-14 md:mt-20 lg:mt-24">
   <div class="grid items-center gap-12 md:flex md:gap-16 lg:gap-32">
     <div class="flex-1">
       <h1 class="relative">
@@ -25,12 +25,14 @@ import Link from "./Link.astro";
         <Link href={"/"} asButton={{ variant: "outline" }}>Apply Now</Link>
       </div>
     </div>
-    <div class="relative flex-1 overflow-hidden rounded-3xl">
+    <div
+      class="relative max-h-[400px] flex-1 overflow-hidden rounded-3xl md:max-h-[600px]"
+    >
       <Image src={WavesPattern} alt="banner" class="absolute h-full" />
       <Image
         src={bannerImg}
         alt="banner"
-        class="relative z-10 h-full w-full object-contain pt-7"
+        class="relative z-10 h-full w-full object-contain object-bottom pt-7"
       />
     </div>
   </div>
