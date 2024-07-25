@@ -1,7 +1,7 @@
 export const links = [
-  { href: "/", text: "About" },
-  { href: "/", text: "Coaching" },
-  { href: "/", text: "Testimonials" },
-  { href: "/", text: "Team" },
-  { href: "/", text: "Contact" },
+  { href: "/about", text: "About" },
+  { href: "/coaching", text: "Coaching" },
+  { href: "/Testimonials", text: "Testimonials" },
+  { href: "/team", text: "Team" },
+  { href: "/contact", text: "Contact" },
 ];
