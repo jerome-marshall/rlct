@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import bannerImg from "@/assets/restoreStaffs.png";
 import WavesPattern from "@/assets/waves-pattern.png";
 import Link from "./Link.astro";
+import RegisterDialog from "./RegisterDialog";
 ---
 
 <div class="module-m container mt-14 md:mt-20 lg:mt-24">
@@ -21,8 +22,10 @@ import Link from "./Link.astro";
         diabetes, hypertension and obesity.
       </p>
       <div class="flex gap-4 pt-8">
-        <Link href="/" asButton={{ variant: "accent" }}>Learn More</Link>
-        <Link href={"/"} asButton={{ variant: "outline" }}>Apply Now</Link>
+        <Link href="/#coaching-solutions" asButton={{ variant: "accent" }}
+          >Learn More</Link
+        >
+        <RegisterDialog btnText="Apply Now" client:only="react" />
       </div>
     </div>
     <div

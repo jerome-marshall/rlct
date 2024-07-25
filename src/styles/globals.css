@@ -162,6 +162,13 @@
     @apply text-sm leading-relaxed text-text;
   }
 
+  ul {
+    @apply grid list-inside list-disc gap-1;
+    li {
+      @apply text-sm leading-relaxed text-heading;
+    }
+  }
+
   .module-m {
     margin-top: 4rem;
     margin-bottom: 4rem;

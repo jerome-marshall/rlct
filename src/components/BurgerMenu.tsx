@@ -13,6 +13,7 @@ import { links } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { MenuIcon } from "lucide-react";
 import logo from "@/assets/restore.webp";
+import RegisterDialog from "./RegisterDialog";
 
 export default function BurgerMenu() {
   return (
@@ -24,7 +25,11 @@ export default function BurgerMenu() {
       </SheetTrigger>
       <SheetContent className="w-full">
         <SheetHeader className="flex items-center justify-between border-b border-border pb-4">
-          <img src={logo.src} alt="Logo" className="w-36 md:w-36" />
+          <SheetClose asChild>
+            <a href="/">
+              <img src={logo.src} alt="Logo" className="w-36 md:w-36" />
+            </a>
+          </SheetClose>
         </SheetHeader>
         <div className="grid gap-4 py-4">
           {links.map((link) => (
@@ -36,9 +41,12 @@ export default function BurgerMenu() {
           ))}
         </div>
         <SheetFooter className="mt-5">
-          <a href="/" className={cn(buttonVariants({ variant: "accent" }))}>
-            Register Now
-          </a>
+          <RegisterDialog
+            triggerClassname={cn(
+              buttonVariants({ variant: "accent" }),
+              "border-0",
+            )}
+          />
         </SheetFooter>
       </SheetContent>
     </Sheet>

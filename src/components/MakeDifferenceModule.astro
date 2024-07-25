@@ -1,6 +1,8 @@
 ---
+import { cn } from "@/lib/utils";
 import ModuleBackground from "./ModuleBackground.astro";
-import Link from "./Link.astro";
+import RegisterDialog from "./RegisterDialog";
+import { buttonVariants } from "./ui/button";
 ---
 
 <ModuleBackground
@@ -18,9 +20,11 @@ import Link from "./Link.astro";
     transform lives through holistic health ministry. Start your journey today
     and make a meaningful impact.
   </p>
-  <Link
-    href="/"
-    asButton={{ variant: "accent-primary-outline" }}
-    className="mt-8 min-w-40">Register Now</Link
-  >
+  <RegisterDialog
+    client:only="react"
+    triggerClassname={cn(
+      buttonVariants({ variant: "accent-primary-outline" }),
+      " mt-8 min-w-40",
+    )}
+  />
 </ModuleBackground>
