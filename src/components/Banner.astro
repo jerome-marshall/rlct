@@ -4,6 +4,8 @@ import bannerImg from "@/assets/restoreStaffs.png";
 import WavesPattern from "@/assets/waves-pattern.png";
 import Link from "./Link.astro";
 import RegisterDialog from "./RegisterDialog";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "./ui/button";
 ---
 
 <div class="module-m container mt-14 md:mt-20 lg:mt-24">
@@ -22,10 +24,17 @@ import RegisterDialog from "./RegisterDialog";
         diabetes, hypertension and obesity.
       </p>
       <div class="flex gap-4 pt-8">
-        <Link href="/#coaching-solutions" asButton={{ variant: "accent" }}
+        <Link href="/#coaching-solutions" asButton={{ variant: "outline" }}
           >Learn More</Link
         >
-        <RegisterDialog btnText="Apply Now" client:only="react" />
+        <RegisterDialog
+          btnText="Apply Now"
+          client:only="react"
+          triggerClassname={cn(
+            buttonVariants({ variant: "accent" }),
+            "border-0",
+          )}
+        />
       </div>
     </div>
     <div

@@ -23,7 +23,7 @@ export default function BurgerMenu() {
           <MenuIcon className="size-7 text-primary" />
         </div>
       </SheetTrigger>
-      <SheetContent className="w-full">
+      <SheetContent className="w-[85%]">
         <SheetHeader className="flex items-center justify-between border-b border-border pb-4">
           <SheetClose asChild>
             <a href="/">
