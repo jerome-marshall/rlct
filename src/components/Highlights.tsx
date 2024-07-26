@@ -63,7 +63,11 @@ const RenderImage = ({ image }: { image: GetImageResult }) => {
   return (
     <div className="px-2">
       <div className="aspect-square overflow-hidden rounded-xl">
-        <img src={image.src} className="h-full w-full object-cover" />
+        <img
+          src={image.src}
+          className="h-full w-full object-cover"
+          alt="hightlight-image"
+        />
       </div>
     </div>
   );

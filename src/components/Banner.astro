@@ -40,11 +40,17 @@ import { buttonVariants } from "./ui/button";
     <div
       class="relative max-h-[400px] flex-1 overflow-hidden rounded-3xl md:max-h-[600px]"
     >
-      <Image src={WavesPattern} alt="banner" class="absolute h-full" />
+      <Image
+        src={WavesPattern}
+        alt="banner"
+        class="absolute aspect-square h-full"
+        loading={"eager"}
+      />
       <Image
         src={bannerImg}
         alt="banner"
         class="relative z-10 h-full w-full object-contain object-bottom pt-7"
+        loading={"eager"}
       />
     </div>
   </div>
