@@ -19,7 +19,7 @@ export default function BurgerMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className="flex md:hidden">
+        <button className="flex md:hidden" aria-label="Menu">
           <MenuIcon className="size-7 text-primary" />
         </button>
       </SheetTrigger>
