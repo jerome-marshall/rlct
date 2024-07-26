@@ -36,26 +36,24 @@ const Highlights = ({ images }: { images: GetImageResult[] }) => {
   };
 
   return (
-    <div className="scroll-margin-m" id="highlights">
-      <div className="module-m overflow-hidden">
-        <h2 className="text-center">
-          Training{" "}
-          <span className="marker-underline font-secondary text-primary">
-            Highlights
-          </span>
-        </h2>
-        <div className="highlight-slider-container mt-16">
-          <Slider {...settingsRTL}>
-            {images.map((image, index) => (
-              <RenderImage key={index} image={image} />
-            ))}
-          </Slider>
-          <Slider {...commonSettings} className="mt-4 translate-x-[140px]">
-            {images.map((image, index) => (
-              <RenderImage key={index} image={image} />
-            ))}
-          </Slider>
-        </div>
+    <div className="module-m overflow-hidden">
+      <h2 className="text-center">
+        Training{" "}
+        <span className="marker-underline font-secondary text-primary">
+          Highlights
+        </span>
+      </h2>
+      <div className="highlight-slider-container mt-16">
+        <Slider {...settingsRTL}>
+          {images.map((image, index) => (
+            <RenderImage key={index} image={image} />
+          ))}
+        </Slider>
+        <Slider {...commonSettings} className="mt-4 translate-x-[140px]">
+          {images.map((image, index) => (
+            <RenderImage key={index} image={image} />
+          ))}
+        </Slider>
       </div>
     </div>
   );

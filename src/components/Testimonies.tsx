@@ -76,65 +76,58 @@ const Testimonies = () => {
   };
 
   return (
-    <div
-      className="module-p scroll-margin-p bg-background-secondary"
-      id="testimonials"
-    >
-      <div className="container">
-        <h2 className="relative text-center">
-          <span className="marker-underline font-secondary text-primary">
-            Testimonial
-          </span>{" "}
-          Spotlight
-          <br />
-        </h2>
-        <p className="mx-auto max-w-[700px] pt-6 text-center">
-          Discover how this course has transformed lives through personal
-          stories and impactful experiences. See how our holistic approach to
-          health ministry fosters growth and achievement.
-        </p>
-        <div className="testimonials-slider pt-10 md:pt-14">
-          <Slider {...commonSettings} className="">
-            {testimonials.map((testimonial) => (
-              <div className="relative h-full rounded-xl bg-background p-6 shadow-md">
-                <div className="flex items-center justify-between border-b border-border pb-4">
-                  <div className="flex items-center">
-                    <div className="relative mr-4 flex size-14 items-center justify-center overflow-hidden rounded-full bg-background-green shadow-sm">
-                      {testimonial.image ? (
-                        <img
-                          src={testimonial.image}
-                          alt="testimonial"
-                          className="h-full w-full rounded-full"
-                          width={64}
-                          height={64}
-                        />
-                      ) : (
-                        <p className="font-secondary text-lg uppercase text-primary-foreground">
-                          {testimonial.name
-                            .split(" ")
-                            .map((name) => name[0])
-                            .join("")}
-                        </p>
-                      )}
-                    </div>
-                    <div>
-                      <h3 className="text-lg leading-none">
-                        {testimonial.name}
-                      </h3>
-                      <p className="pt-1 text-xs font-semibold text-primary">
-                        {testimonial.title}
+    <div className="module-p container">
+      <h2 className="relative text-center">
+        <span className="marker-underline font-secondary text-primary">
+          Testimonial
+        </span>{" "}
+        Spotlight
+        <br />
+      </h2>
+      <p className="mx-auto max-w-[700px] pt-6 text-center">
+        Discover how this course has transformed lives through personal stories
+        and impactful experiences. See how our holistic approach to health
+        ministry fosters growth and achievement.
+      </p>
+      <div className="testimonials-slider pt-10 md:pt-14">
+        <Slider {...commonSettings} className="">
+          {testimonials.map((testimonial) => (
+            <div className="relative h-full rounded-xl bg-background p-6 shadow-md">
+              <div className="flex items-center justify-between border-b border-border pb-4">
+                <div className="flex items-center">
+                  <div className="relative mr-4 flex size-14 items-center justify-center overflow-hidden rounded-full bg-background-green shadow-sm">
+                    {testimonial.image ? (
+                      <img
+                        src={testimonial.image}
+                        alt="testimonial"
+                        className="h-full w-full rounded-full"
+                        width={64}
+                        height={64}
+                      />
+                    ) : (
+                      <p className="font-secondary text-lg uppercase text-primary-foreground">
+                        {testimonial.name
+                          .split(" ")
+                          .map((name) => name[0])
+                          .join("")}
                       </p>
-                    </div>
+                    )}
                   </div>
-                  <img src={quote.src} alt="quote" className="size-10" />
+                  <div>
+                    <h3 className="text-lg leading-none">{testimonial.name}</h3>
+                    <p className="pt-1 text-xs font-semibold text-primary">
+                      {testimonial.title}
+                    </p>
+                  </div>
                 </div>
-                <p className="line-clamp-[8] overflow-hidden text-ellipsis pt-4">
-                  {testimonial.quote}
-                </p>
+                <img src={quote.src} alt="quote" className="size-10" />
               </div>
-            ))}
-          </Slider>
-        </div>
+              <p className="line-clamp-[8] overflow-hidden text-ellipsis pt-4">
+                {testimonial.quote}
+              </p>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
