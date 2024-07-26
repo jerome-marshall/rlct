@@ -44,12 +44,19 @@ const optimizedImages = await Promise.all(
   <CardModule />
   <StepsModule />
   <TeamModule />
-  <div class="scroll-margin-m" id="highlights">
+  <div
+    class="scroll-margin-m min-h[450px] md:min-h-[580px] xl:min-h-[700px]"
+    id="highlights"
+    transition:persist
+  >
     <Highlights client:only="react" images={optimizedImages} />
   </div>
-
   <MakeDifferenceModule />
-  <div class="scroll-margin-p bg-background-secondary" id="testimonials">
+  <div
+    class="scroll-margin-p min-h-[600px] lg:min-h-[700px]"
+    id="testimonials"
+    transition:persist
+  >
     <Testimonies client:only="react" />
   </div>
 </Layout>

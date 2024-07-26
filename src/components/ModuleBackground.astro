@@ -11,8 +11,8 @@ interface Props {
 const { className, wrapperClassName } = Astro.props;
 ---
 
-<div class={cn("", wrapperClassName)}>
-  <div class={cn("container module-m")}>
+<div class={cn("container module-m flex flex-col items-center justify-center")}>
+  <div class={cn("w-full", wrapperClassName)}>
     <div class="relative overflow-hidden rounded-3xl">
       <Image
         src={WavesPattern}

@@ -2,12 +2,13 @@
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import "@/styles/globals.css";
+import { ViewTransitions } from "astro:transitions";
 
 const { title = "RLCT" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="!scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Restore Llifestyle Coach Training" />
@@ -32,6 +33,7 @@ const { title = "RLCT" } = Astro.props;
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <Header />
@@ -39,3 +41,14 @@ const { title = "RLCT" } = Astro.props;
     <Footer />
   </body>
 </html>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth !important;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+  }
+</style>
