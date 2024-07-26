@@ -1,0 +1,150 @@
+---
+import MakeDifferenceModule from "@/components/MakeDifferenceModule.astro";
+import Layout from "@/layouts/Layout.astro";
+import {
+  AppleIcon,
+  BookOpenIcon,
+  BrainIcon,
+  BriefcaseMedicalIcon,
+  ClipboardCheckIcon,
+  CompassIcon,
+  HeartPulseIcon,
+  LeafIcon,
+  MegaphoneIcon,
+  MountainIcon,
+  SmileIcon,
+  SunIcon,
+  UsersIcon,
+  UtensilsIcon,
+} from "lucide-react";
+
+const cardDetails = [
+  {
+    title: "Lifestyle Diseases & Health Talks",
+    description:
+      "Master the prevention and reversal of chronic conditions like diabetes, hypertension, and obesity. Learn to identify causes, recognize symptoms, and implement effective lifestyle interventions. Develop skills to deliver engaging health talks on various topics to educate and inspire communities.",
+    icon: HeartPulseIcon,
+  },
+  {
+    title: "Natural Remedies & Massage",
+    description:
+      "Gain hands-on training in a variety of natural healing methods. Learn hydrotherapy techniques, therapeutic massage including chair massage, and the application of natural remedies such as charcoal, herbs, and poultices. Discover how to utilize these treatments for various health conditions and illnesses.",
+    icon: LeafIcon,
+  },
+  {
+    title: "God's Laws of Health",
+    description:
+      "Explore the divine principles of holistic health and wellness. Learn how to apply these principles in your own life and effectively share them with others. Discover the connection between physical health and spiritual well-being, and how to present this information in compelling health talks.",
+    icon: SunIcon,
+  },
+  {
+    title: "Anatomy & Physiology",
+    description:
+      "Dive deep into the human body's structure and function. Identify major body systems and understand their intricate workings. Learn how to maintain optimal health to honor God through proper care of the body. Gain insights into how lifestyle choices impact overall health and bodily functions.",
+    icon: BrainIcon,
+  },
+  {
+    title: "Healthful Cooking",
+    description:
+      "Discover simple yet powerful ways to prepare nutritious meals that can help reverse lifestyle diseases. Master healthful cooking principles, learn effective menu planning strategies, and gain hands-on experience in food preparation. Explore how diet impacts health and learn to create delicious, healing meals.",
+    icon: UtensilsIcon,
+  },
+  {
+    title: "Nutrition",
+    description:
+      "Uncover the secrets of a well-balanced, nutritious diet. Study God's purpose and design for optimal health through food. Delve into the roles of essential nutrients, vitamins, minerals, and fiber in the body. Learn how to create meal plans that nourish and heal, supporting overall wellness.",
+    icon: AppleIcon,
+  },
+  {
+    title: "Mental & Emotional Healing",
+    description:
+      "Explore holistic approaches to mental and emotional well-being. Learn techniques for depression recovery, stress relief, and grief management. Discover the interconnection between mental, emotional, and physical health, and how to support healing in all these areas through natural methods.",
+    icon: SmileIcon,
+  },
+  {
+    title: "Lifestyle Coaching",
+    description:
+      "Develop a comprehensive toolkit for effective health coaching. Learn various techniques to guide clients towards healthier lifestyles. Master the art of conducting thorough client lifestyle assessments and create personalized health plans. Acquire essential coaching practices to motivate and support lasting change.",
+    icon: UsersIcon,
+  },
+  {
+    title: "Basic First Aid",
+    description:
+      "Gain crucial life-saving skills including CPR, wound dressing, and emergency response techniques. Learn how to handle critical situations such as choking, shock, and severe bleeding. Develop confidence in providing immediate care and support in various emergency scenarios.",
+    icon: BriefcaseMedicalIcon,
+  },
+  {
+    title: "Health Outreach",
+    description:
+      "Learn effective strategies to impact your community's health positively. Master the organization and execution of Health Camps as powerful outreach tools. Develop skills in conducting community health surveys and learn techniques for promoting and selling health literature to spread awareness.",
+    icon: MegaphoneIcon,
+  },
+  {
+    title: "Christian History",
+    description:
+      "Embark on a journey through time, exploring the rich history of God's faithful people. Trace the path from the early Christian church through the challenges of the Dark Ages and the transformative Protestant Reformation. Gain insights into the development of the final remnant and understand last-day events.",
+    icon: BookOpenIcon,
+  },
+  {
+    title: "Thoughts from the Mount of Blessings",
+    description:
+      "Engage in an in-depth, interactive study of the Sermon on the Mount. Explore the profound teachings of Jesus and their practical applications in daily life. Discover how these timeless principles shape character and lead to a deeper, more fulfilling spiritual experience.",
+    icon: MountainIcon,
+  },
+  {
+    title: "The Way of Life",
+    description:
+      "Master the art of using Bible stories as powerful teaching tools. This four-part course covers: 1) The great controversy between Christ and Satan, 2) Giving your heart to Jesus and daily Christian living, 3) Core Bible teachings and prophecy, and 4) Effective methods for applying and sharing these truths.",
+    icon: CompassIcon,
+  },
+  {
+    title: "Practicum",
+    description:
+      "Put your learning into practice with a comprehensive 1-month hands-on experience. Apply your skills in real-world settings such as lifestyle centers or as a lifestyle coach. This practical experience solidifies your training and prepares you for your future role. Upon completion, receive your Restore Lifestyle Coach certificate.",
+    icon: ClipboardCheckIcon,
+  },
+];
+---
+
+<Layout>
+  <div class="bg-background-secondary pt-[calc(var(--header-height)-2rem)]">
+    <div class="module-p container flex flex-col items-center justify-center">
+      <div
+        class="flex max-w-[600px] flex-col items-center justify-center gap-6"
+      >
+        <h1 class="relative text-center">
+          RLCT <span class="marker-underline font-secondary text-primary"
+            >Curriculum</span
+          >
+        </h1>
+        <p class="text-center">
+          Our college-level course offers a comprehensive blend of health
+          sciences, natural remedies, spiritual growth, and practical skills to
+          equip you as a holistic lifestyle coach.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 gap-6 pt-10 md:grid-cols-2 md:gap-8 md:pt-12 lg:grid-cols-3 lg:pt-16"
+      >
+        {
+          cardDetails.map(({ icon: Icon, title, description }) => (
+            <div class="rounded-xl bg-background p-6 shadow-md md:p-7">
+              <div class="flex flex-col">
+                <div class="flex items-center justify-center">
+                  <div class="rounded-full bg-background-tertiary p-3.5 md:p-4">
+                    <Icon className="size-8 md:size-10 text-primary" />
+                  </div>
+                </div>
+                <div class="mt-5 flex-1 md:mt-6">
+                  <h3 class="text-center">{title}</h3>
+                  <p class="pt-3 md:pt-4">{description}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <MakeDifferenceModule />
+</Layout>

@@ -3,5 +3,5 @@ export const links = [
   { href: "/#team", text: "Team" },
   { href: "/#highlights", text: "Highlights" },
   { href: "/#testimonials", text: "Testimonials" },
-  { href: "/#footer", text: "Contact" },
+  { href: "/curriculum", text: "Curriculum" },
 ];
