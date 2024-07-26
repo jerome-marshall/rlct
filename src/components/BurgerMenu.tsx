@@ -19,9 +19,9 @@ export default function BurgerMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <div className="flex md:hidden">
+        <button className="flex md:hidden">
           <MenuIcon className="size-7 text-primary" />
-        </div>
+        </button>
       </SheetTrigger>
       <SheetContent className="w-[85%]">
         <SheetHeader className="flex items-center justify-between border-b border-border pb-4">
